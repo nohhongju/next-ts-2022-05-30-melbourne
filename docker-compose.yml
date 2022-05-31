@@ -1,0 +1,12 @@
+version: '3.6'
+services:
+  landing:
+    build:
+      context: "./"
+      dockerfile: Dockerfile
+    environment:
+      APP_ENV: development
+    volumes:
+      - "./src:/app/src"
+    ports:
+      - "3000:3000"
